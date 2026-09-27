@@ -1,0 +1,86 @@
+{
+  "productionExport": "dist/",
+  "servedAt": "/preview/",
+  "date": "2026-09-27T06:35:33.090Z",
+  "browser": "154.0.8037.0",
+  "checks": [
+    "Disconnected: live public reads; buy and claim disabled",
+    "Keyboard wallet connection; wrong-chain gate",
+    "Unknown network: switch → exact wallet_addEthereumChain parameters → switch",
+    "Amount precision and slippage validation; field focus and preset amount",
+    "Failed quote reports a recoverable error and cannot be submitted",
+    "Rendered connected quote: axe WCAG A/AA automated scan has no violations",
+    "No horizontal overflow at 1440, 980, 820, 780, 390, 320 CSS pixels",
+    "Reduced motion and 200% text enlargement at 390px",
+    "Expired quote disables purchase after 30 seconds",
+    "Account change discards the previous account’s quote",
+    "Buy simulation revert prevents a wallet send",
+    "Wallet rejection is recoverable",
+    "Successful keyboard-driven mocked buy: exact hook, PoolKey, 0.005 ETH, net quote × 99.5% minOut, receipt and explorer link; no approval",
+    "Claim at confirmed expiry; non-winner caller gets explicit recipient; timer-reset race blocks send",
+    "Successful mocked claim uses the intended PoolKey with no ETH value",
+    "Empty round and recent-events empty state",
+    "Stale block disables signing",
+    "RPC outage disables actions and recovers on refresh",
+    "Missing wallet instructions",
+    "Connection rejection",
+    "Empty deployed bytecode blocks actions",
+    "Tampered ABI fails closed before wallet or RPC setup",
+    "No production resource failures or uncaught browser/console errors"
+  ],
+  "screenshots": [
+    "keyboard-focus.png",
+    "desktop-mock.png",
+    "width-820-mock.png",
+    "width-390-mock.png",
+    "width-320-mock.png"
+  ],
+  "consoleErrors": [],
+  "resourceFailures": [],
+  "realTransactions": 0,
+  "contrast": [
+    {
+      "selector": ".intro-copy",
+      "foreground": "rgb(101, 112, 95)",
+      "background": "rgb(246, 245, 239)",
+      "ratio": 4.76
+    },
+    {
+      "selector": ".brand-caption",
+      "foreground": "rgb(101, 112, 95)",
+      "background": "rgb(246, 245, 239)",
+      "ratio": 4.76
+    },
+    {
+      "selector": ".jackpot-caption",
+      "foreground": "rgb(197, 205, 189)",
+      "background": "rgb(34, 43, 34)",
+      "ratio": 8.94
+    },
+    {
+      "selector": ".jackpot-number",
+      "foreground": "rgb(246, 245, 239)",
+      "background": "rgb(34, 43, 34)",
+      "ratio": 13.38
+    },
+    {
+      "selector": ".hint",
+      "foreground": "rgb(101, 112, 95)",
+      "background": "rgb(255, 254, 251)",
+      "ratio": 5.16
+    },
+    {
+      "selector": ".buy-actions .primary",
+      "foreground": "rgb(34, 43, 34)",
+      "background": "rgb(201, 231, 123)",
+      "ratio": 10.58
+    }
+  ],
+  "accessibility": {
+    "violations": [],
+    "incomplete": [
+      "color-contrast"
+    ]
+  },
+  "result": "passed"
+}

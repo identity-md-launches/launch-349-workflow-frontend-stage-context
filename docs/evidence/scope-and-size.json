@@ -1,0 +1,12 @@
+{
+  "newFiles": 42,
+  "newFileBytes": 1990393,
+  "existingHistoryBundleBytes": 225253,
+  "sumBytes": 2215646,
+  "submissionLimitBytes": 8388608,
+  "scope": "all new files in web/, dist/, docs/",
+  "protectedTrackedFilesChanged": false,
+  "gitCommit": "blocked: workspace .git is read-only",
+  "exactFinalBundleMeasured": false,
+  "note": "Existing complete-history bundle plus uncompressed new file bytes provides substantial size headroom. Final committed bundle cannot be produced in this read-only Git environment."
+}

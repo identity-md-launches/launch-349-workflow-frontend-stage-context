@@ -1,0 +1,53 @@
+{
+  "chainId": 11155111,
+  "repoUrl": "https://github.com/identity-md-launches/launch-241-lastbuyerjackpothook",
+  "version": 1,
+  "launchId": "e29039eb-2fa3-4570-bdbf-3a228fed2b31",
+  "manifest": {
+    "hook": {
+      "contract": "LastBuyerJackpotHook",
+      "permissions": [
+        "afterSwap",
+        "afterSwapReturnDelta"
+      ],
+      "constructorArgs": [
+        "0xE03A1074c86CFeDd5C142C4F04F1a1536e203543"
+      ]
+    },
+    "kind": "univ4_hook",
+    "pool": {
+      "fee": 3000,
+      "tickSpacing": 60,
+      "initialPrice": "78588986356927097284479352776873",
+      "pairedCurrency": "0x0000000000000000000000000000000000000000"
+    },
+    "notes": "Sepolia test toy with no value. Sources: src/LastBuyerJackpotHook.sol and src/LaunchToken.sol; ABI exports: docs/abi/LastBuyerJackpotHook.json and docs/abi/LaunchToken.json. The hook takes only the literal Sepolia PoolManager argument; the token takes no constructor arguments. Only afterSwap and afterSwapReturnDelta are enabled (address bits 0x0044 under mask 0x3fff); construction validates the hook address and the factory mines its CREATE2 salt. The intended pool orders native ETH as currency0 and deployed LBUY as currency1. initialPrice is decimal sqrtPriceX96, TickMath.getSqrtPriceAtTick(138000), matching test/BaseHookTest.sol. That harness seeds token-only liquidity below this starting tick, allowing the first buy with no ETH reserve. Each exact-input ETH buy contributes floor(gross LBUY output / 100) through a positive unspecified return delta backed by ERC-6909 claims at PoolManager. Sells, exact-output buys and non-native pools do not feed or update rounds. Specified input of at least 0.001 ETH plus a canonical nonzero address in exactly 32 bytes of hookData sets the leader and resets a 3600-second timer. Malformed data still pays the fee without qualifying; there is no sender fallback. Router hookData is unauthenticated and can gift leadership. buy(key, minOut) authenticates msg.sender, applies the same fee once, enforces net output and refunds unspent ETH. Qualification uses specified input even for partial fills. Anyone may claim after expiry, but payment goes to the recorded leader; a qualifying buy before claim resets the timer. State is isolated by PoolId. Unsolicited claim donations are unassigned surplus. The hook can serve other native-token pools, so services and the frontend must bind to the intended pool. Launch policy and signed artifact linkage belong to services; publication, attestation, admission and deployment follow this stage. This manifest does not assert independent review approval or a live deployment.",
+    "token": {
+      "name": "Last Buyer",
+      "symbol": "LBUY",
+      "contract": "LaunchToken",
+      "decimals": 18
+    }
+  },
+  "contracts": [
+    {
+      "name": "LaunchToken",
+      "txHash": "0xacf22eafdd2d37ab31acf0a42fbafe4a0d2664154f4042f3c5b09b44ae39778a",
+      "abiHash": "f36d2fe28b62f817a4fba0b78bb501b41895eada3982280273c063ad8183f577",
+      "address": "0x0db82f38997c2ab9cff32e4fdc41c41fa4d1a318",
+      "blockNumber": 11791360,
+      "creationCodeHash": "38e38eab6c68137c1c7316cf0a0b2135bcff14bd43fedac3b00751cd6b9be55b"
+    },
+    {
+      "name": "LastBuyerJackpotHook",
+      "txHash": "0xacf22eafdd2d37ab31acf0a42fbafe4a0d2664154f4042f3c5b09b44ae39778a",
+      "abiHash": "e25cf78509cb8f8c3f98c94d55ee34a64794f4f0ab7bdd4d81ee2a5ccbb79262",
+      "address": "0xccaf93cbb50a1a0b71616d0858579427fadf4044",
+      "blockNumber": 11791360,
+      "creationCodeHash": "24045868a0065a3d3eb3c7c0db21942c8560bfdeab693390e06208dd3e111dd8"
+    }
+  ],
+  "sourceCommit": "f3b915d1da3cace45aa18c40d42713227afe25c7",
+  "abiInstructions": "Build ABIs from this exact source commit; compare canonicalKeccak(abi) with abiHash. Verify deployed code on the stated chain before enabling transactions.",
+  "attestationHash": "50950a9c4db9e271f54f7f9412910ad8907f3b14951c20477199b43bb703f6c8"
+}

@@ -1,0 +1,9 @@
+# Explicitly allowed ignore-file path. Applies at every level under web/.
+node_modules/
+.cache/
+.npm/
+.pnpm-store/
+test-results/
+playwright-report/
+*.tsbuildinfo
+*.log

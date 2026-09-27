@@ -1,0 +1,5 @@
+
+> last-buyer-jackpot-web@1.0.0 verify
+> node scripts/verify.mjs
+
+PASS: handoff, network, ABI binding, relative entrypoint, complete inventory; 7 assets / 656234 bytes.

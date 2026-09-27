@@ -1,0 +1,27 @@
+
+> last-buyer-jackpot-web@1.0.0 test
+> node tests/browser.mjs
+
+PASS Disconnected: live public reads; buy and claim disabled
+PASS Keyboard wallet connection; wrong-chain gate
+PASS Unknown network: switch → exact wallet_addEthereumChain parameters → switch
+PASS Amount precision and slippage validation; field focus and preset amount
+PASS Failed quote reports a recoverable error and cannot be submitted
+PASS Rendered connected quote: axe WCAG A/AA automated scan has no violations
+PASS No horizontal overflow at 1440, 980, 820, 780, 390, 320 CSS pixels
+PASS Reduced motion and 200% text enlargement at 390px
+PASS Expired quote disables purchase after 30 seconds
+PASS Account change discards the previous account’s quote
+PASS Buy simulation revert prevents a wallet send
+PASS Wallet rejection is recoverable
+PASS Successful keyboard-driven mocked buy: exact hook, PoolKey, 0.005 ETH, net quote × 99.5% minOut, receipt and explorer link; no approval
+PASS Claim at confirmed expiry; non-winner caller gets explicit recipient; timer-reset race blocks send
+PASS Successful mocked claim uses the intended PoolKey with no ETH value
+PASS Empty round and recent-events empty state
+PASS Stale block disables signing
+PASS RPC outage disables actions and recovers on refresh
+PASS Missing wallet instructions
+PASS Connection rejection
+PASS Empty deployed bytecode blocks actions
+PASS Tampered ABI fails closed before wallet or RPC setup
+PASS No production resource failures or uncaught browser/console errors

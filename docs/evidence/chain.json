@@ -1,0 +1,40 @@
+{
+  "checkedAt": "2026-09-27T06:28:42.669Z",
+  "poolId": "0xea86ed139968f778be24e937d8d2cdea8707f809ba2cde063b9716622efdb2aa",
+  "endpoints": [
+    {
+      "url": "https://ethereum-sepolia-rpc.publicnode.com",
+      "chainId": 11155111,
+      "block": "0xb3ecb3",
+      "timestamp": "0x6ab8b794",
+      "code": [
+        {
+          "name": "LaunchToken",
+          "address": "0x0db82f38997c2ab9cff32e4fdc41c41fa4d1a318",
+          "bytes": 1753
+        },
+        {
+          "name": "LastBuyerJackpotHook",
+          "address": "0xccaf93cbb50a1a0b71616d0858579427fadf4044",
+          "bytes": 8049
+        }
+      ],
+      "state": {
+        "jackpot": "0",
+        "lastBuyer": "0x0000000000000000000000000000000000000000",
+        "lastBuyAt": "0",
+        "round": "0",
+        "claimableAt": "0",
+        "poolManager": "0xE03A1074c86CFeDd5C142C4F04F1a1536e203543"
+      },
+      "quote": {
+        "inputWei": "1000000000000000",
+        "netOutput": "49130814300943727796417",
+        "gasEstimate": "193731",
+        "mode": "eth_call only"
+      }
+    }
+  ],
+  "result": "read-only checks passed",
+  "broadcast": false
+}
